@@ -20,7 +20,7 @@ if ($method === 'OPTIONS') {
 
 
 if ($method === "GET") {
-    echo 'this is a get method';
+    
     if(isset($_GET['id'])){
 
         $fid = $_GET['id'];
