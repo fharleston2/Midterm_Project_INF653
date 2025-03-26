@@ -20,7 +20,7 @@ if ($method === 'OPTIONS') {
 
 
 if ($method === "GET") {
-    echo 'this is a get method';
+    
     if(isset($_GET['author_id']) AND isset($_GET['category_id'])){
         $fauthor_id = $_GET['author_id'];
         $fcategory_id = $_GET['category_id'];
