@@ -44,4 +44,5 @@ if($author->create()){
     echo json_encode(
         array('message' => 'Post not Created')
     );
+    
 }
