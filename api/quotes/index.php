@@ -24,10 +24,10 @@ if ($method === "GET") {
     if(isset($_GET['author_id']) AND isset($_GET['category_id'])){
         $fauthor_id = $_GET['author_id'];
         $fcategory_id = $_GET['category_id'];
-        $isAuthor = isset($_GET['author_id']);
+      //  $isAuthor = isset($_GET['author_id']);
    // var_dump($fauthor_id);
-    $isCategory = isset($_GET['category_id']);
-    var_dump($isCategory);
+   // $isCategory = isset($_GET['category_id']);
+    //var_dump($isCategory);
         header('Location: read.php?author_id=' .$fauthor_id.'&category_id=' .$fcategory_id);
 
     }else if(isset($_GET['category_id'])){
