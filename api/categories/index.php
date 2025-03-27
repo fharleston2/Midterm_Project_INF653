@@ -25,29 +25,32 @@ if ($method === "GET") {
     if(isset($_GET['id'])){
 
         $fid = $_GET['id'];
-        
-        header('Location: read_single.php?id='.$fid);
+        require 'read_single';
+        //header('Location: read_single.php?id='.$fid);
 
     }else {
         
-        header('Location: read.php');
+        require 'read.php';
+        //header('Location: read.php');
     }
 } else if($method === "POST"){
     session_start();
     $_SESSION['input'] = json_decode(file_get_contents("php://input"));
     
-
-    header('Location: create.php');  
+    require 'create.php';
+    //header('Location: create.php');  
 
 }else if($method === "PUT"){
     session_start();
     $_SESSION['input'] = json_decode(file_get_contents("php://input"));
 
-    header('Location: update.php');
+    require 'update.php';
+    //header('Location: update.php');
 
 }else if($method === "DELETE"){
     session_start();
     $_SESSION['input'] = json_decode(file_get_contents("php://input"));
 
-    header('Location: delete.php');
+    require 'delete.php';
+    //header('Location: delete.php');
 }
