@@ -32,7 +32,7 @@ $num = $result->rowCount();
 //any quotes
 if($num > 0){
     $quote_arr = array();
-    $quote_arr['data'] = array();
+    //$quote_arr['data'] = array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
@@ -41,11 +41,12 @@ if($num > 0){
             'quote' => $quote,
             'author' => $author,
             'category' => $category);
-        array_push($quote_arr['data'], $quote_item);
+        array_push($quote_arr, $quote_item);
     }
 
     //turn to JSON $ output
     echo json_encode($quote_arr);
+    return json_encode($quote_arr);
 } else {
     echo json_encode(
         array('message' => 'No quotes found')
