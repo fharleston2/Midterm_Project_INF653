@@ -25,11 +25,12 @@ if ($method === "GET") {
 
         $fid = $_GET['id'];
         
+        
         header('Location: read_single.php?id='.$fid);
 
     }else {
-        
-        header('Location: read.php');
+        require 'read.php';
+        //header('Location: read.php');
     }
 } else if($method === "POST"){
     session_start();
