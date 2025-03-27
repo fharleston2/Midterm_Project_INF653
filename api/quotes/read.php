@@ -21,11 +21,11 @@ $quote = new Quotes($db);
 
 //quote query
 $isAuthor = isset($_GET['author_id']);
-var_dump($isAuthor);
+//var_dump($isAuthor);
 $isCategory = isset($_GET['category_id']);
-var_dump($isCategory);
+//var_dump($isCategory);
 $result = $quote->read();
-var_dump($result);
+//var_dump($result);
 //row count
 $num = $result->rowCount();
 
