@@ -7,6 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 include_once '../../config/Database.php';
 include_once '../../models/Author.php';
+include_once 'read.php';
 
 
 
@@ -20,7 +21,7 @@ if ($method === 'OPTIONS') {
 
 
 if ($method === "GET") {
-    echo 'this is a get method';
+    
     if(isset($_GET['id'])){
 
         $fid = $_GET['id'];
