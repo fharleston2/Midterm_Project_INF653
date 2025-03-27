@@ -29,9 +29,9 @@ $quote->id = $data->id;
 //printf(json_encode($author));
 //delete author
 if($quote->delete()){
-    echo json_encode(
-        array('message' => 'Post Deleted')
-    );
+    echo json_encode($data->id);
+    return json_encode($data->id);    
+    
 } else {
     echo json_encode(
         array('message' => 'Post not UpdaDeleted')

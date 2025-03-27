@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 //header('Access-Control-Allow-Origin: *');
 //header('Content-Type: application/json');
 $method = $_SERVER['REQUEST_METHOD'];
@@ -30,10 +30,11 @@ $author->id = $data->id;
 //delete author
 
 
-if($author->delete()){
-    echo json_encode(
-        array('message' => 'Author id ' . $author->id . ' Deleted')
-    );
+if($author->id != null){
+    $author->delete();
+    echo json_encode($data->id);
+    return json_encode($data->id);  
+    
 } else {
     echo json_encode(
         array('message' => 'Author id ' . $author->id . ' not found')
