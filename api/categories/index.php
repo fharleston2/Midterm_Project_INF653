@@ -7,7 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 include_once '../../config/Database.php';
 include_once '../../models/Author.php';
-include_once 'read.php';
+
 
 
 

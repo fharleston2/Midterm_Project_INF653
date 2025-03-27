@@ -29,7 +29,7 @@ if ($method === "GET") {
 
     }else {
         
-        header('Location: https://midterm-project-inf653.onrender.com/api/categories/read.php');
+        header('Location: read.php');
     }
 } else if($method === "POST"){
     session_start();

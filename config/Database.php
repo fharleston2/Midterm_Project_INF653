@@ -12,15 +12,16 @@
             $this->db_name = getenv('DBNAME');
             $this->username = getenv('USERNAME');
             $this->password = getenv('PASSWORD');
-            $this->port = getenv('PORT');
+            //$this->port = getenv('PORT');
         }
 
         //connection
+        //removed ';port = ' . $this->port . after "$this->HOST
         public function connect() {
             $this->conn = null;
 
             try {
-                $this->conn = new PDO('pgsql:host=' . $this->host . ';port = ' . $this->port . ';dbname= ' . $this->db_name,
+                $this->conn = new PDO('pgsql:host=' . $this->host . ';dbname= ' . $this->db_name,
                 $this->username, $this->password);
                 $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }catch(PDOException $e) {
