@@ -32,4 +32,5 @@ $author_arr = array(
 );
 
 //make json
-print_r(json_encode($author_arr));
+echo json_encode($author_arr);
+return json_encode($author_arr);

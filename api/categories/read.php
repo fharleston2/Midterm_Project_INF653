@@ -28,18 +28,19 @@ $num = $result->rowCount();
 //any categories
 if($num > 0){
     $category_arr = array();
-    $category_arr['data'] = array();
+    //$category_arr['data'] = array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         $category_item = array(
             'id' => $id,
             'category' =>$category);
-        array_push($category_arr['data'], $category_item);
+        array_push($category_arr, $category_item);
     }
 
     //turn to JSON $ output
     echo json_encode($category_arr);
+    return json_encode($category_arr);
 } else {
     echo json_encode(
         array('message' => 'No categories found')

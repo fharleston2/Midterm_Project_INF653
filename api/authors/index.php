@@ -26,7 +26,7 @@ if ($method === "GET") {
         $fid = $_GET['id'];
         
         require 'read_single.php';
-        header('Location: read_single.php?id='.$fid);
+        //header('Location: read_single.php?id='.$fid);
 
     }else {
         require 'read.php';
